@@ -1,0 +1,66 @@
+
+h1{
+    font-size: 100px;
+    font-family: fantasy;
+    text-align: center;
+    color: aliceblue;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+
+  /* FONDO PRINCIPAL */
+  background-image:
+    linear-gradient(
+      rgba(63, 232, 34, 0.637),
+      rgba(60, 96, 58, 0.4)
+    ),
+    url("/static/img/e406e99b-ananuca-amarilla.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* IMAGEN SECUNDARIA (detrás de botones) */
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/static/img/favicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 320px;
+
+  opacity: 0.15;   /* AJUSTA AQUÍ */
+  z-index: 1;
+}
+
+/* CONTENIDO ARRIBA */
+main {
+  position: relative;
+  z-index: 2;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+
+  background: rgba(0, 0, 0, 0.25); /* banda sutil */
+  backdrop-filter: blur(4px);
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+
+  z-index: 2;
+}
+
+
